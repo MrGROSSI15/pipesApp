@@ -1,1 +1,66 @@
-<p>uncommon-page works!</p>
+<p-panel header="pipes numeros" class="p-1">
+  <p>
+    pipes incluidos en angular numeros
+  </p>
+
+</p-panel>
+
+<div class="grid">
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
+
+      <p>
+       Saludos {{ name  }} quiero {{ gender | i18nSelect:invitationMap }} a un evento
+      </p>
+
+      <p-button
+        (click)="changeClient()"
+        label=" cambiar persona"
+        >
+      </p-button>
+
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+
+      <p>
+        actualmente {{ clients.length | i18nPlural:clientsMap }}
+      </p>
+
+      <p-button
+      (click)="deleteClient()"
+      label="cliente atendido">
+
+      </p-button>
+
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="Slice Pipe" [toggleable]="true">
+
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="json Pipe" [toggleable]="true">
+
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="KeyBalue Pipe" [toggleable]="true">
+
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-fieldset legend="Async Pipe" [toggleable]="true">
+
+    </p-fieldset>
+  </div>
+
+
+</div>
